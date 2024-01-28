@@ -1,38 +1,231 @@
 .App {
   text-align: center;
+
+}
+body{
+  timeline-scope: --myScroller;
+}
+.intro-para{
+  line-height: 150%;
+}
+.main-text{
+  font-size: xx-large;
+}
+nav {
+  background-color:#1F93FF;
+  height: 5px;
+  padding: 0rem 5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 1.5em;
+  margin: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.first-img {
+  margin: 20px 0;
+  height: 130px;
+  width: 130px;
+  border-radius: 7em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  text-align: start;
+
+}
+
+.desc {
   display: flex;
   flex-direction: column;
+  gap: 3em;
+  align-items: flex-start;
+  margin: 50px 0;
+  padding: 0rem 5%;
+}
+.hidden{
+  opacity: 0;
+  transition: all 1s;
+}
+.show{
+  opacity: 1;
+}
+.app-box{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3em;
+}
+.part2{
+  width: 50%;
+  /* margin-left: 60px; */
+  padding: 1em;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+p {
+  text-align: start;
+}
+.part2-p{
+  text-align: center;
+}
+
+.certificate-box {
+  background-color: rgb(15, 15, 15);
   color: white;
+  gap: 2em;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+  padding: 2rem 0;
+}
+.certificate-container{
+  
+    display: flex;
+    /* gap: 2em; */
+    flex-direction: column;
+}
+.element h5{
+  font-size: medium;
+  color: #1F93FF;
+}
+.element p{
+  color: grey;
+  font-size: small;
 }
 
-.App-link {
-  color: #61dafb;
+.certificate-box h2{
+  padding: 0 5%;
+
+}
+.name-issuer-vrspace{
+  gap: 0.9em;
+  display: flex;
+  flex-direction: column;
+}
+.element{
+  padding: 15px 5%;
+  
+  display: flex;
+  justify-content: space-between
+}
+.element:hover{
+  background-color: rgb(65, 65, 65);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.svg {
+  filter: invert(1);
+  /* fill: Blue; */
+}
+.sociallinks-horizontal{
+  display: flex;
+  justify-content: space-around;
+}
+.social-link-hrspace{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1em;
+  height: 80px;
+  align-items: center;
+  position: relative;
+
+
+}
+.social1{
+  display: flex;
+  justify-content: center;
+}
+.link-box{
+  display:none;
+  
+  color: white;
+    padding: 10px;
+    position: absolute;
+    border-radius: 20px;
+    background-color: gray;
+    left: 140%;
+
+}
+/* .svg-socials{
+  position: relative;
+} */
+.socials{
+  margin: 50px 0;
+  padding: 2rem 5%;
+}
+.connect-box{
+  margin: 50px 0;
+  padding: 2rem 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.part1{
+  width: 50%;
+  background-color: black;
+  padding: 2em 2em;
+}
+.input-box{
+  border-bottom: grey;
+  background-color: transparent;
+  border: transparent;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+}
+.connect-partition{
+  display: flex;
+  flex-direction: row;
+}
+.form-box form{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.submit{
+  background-color: #1F93FF;
+  border-color: transparent;
+  color: white;
+  
+
+}
+.submit:hover{
+  
+  border-color: #1F93FF;
+  color: white
+}
+
+.rotate-to-right{
+  animation: rotate-appear;
+  /* animation:rotate-appear 2s linear 0s forwards  ease-in-out; */
+  animation-timeline: --myscroller;
+}
+.scroller{
+  overflow: scroll;
+  scroll-timeline-name: --myscroller ;
+}
+
+.box{
+  height: 50px;
+  width: 50px;
+  background-color: #1F93FF;
+  border-radius: 10px;
+  position: fixed;
+  top: 20px;
+  left: 0%;
+}
+
+
+/* animations */
+@keyframes rotate-appear{
+  from{
+    rotate: 0deg;
+    left: 0%;
   }
-  to {
-    transform: rotate(360deg);
+  to{
+    rotate:  720deg;
+    left: 100%;
   }
 }

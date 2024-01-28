@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+import Navbar from './Navbar';
 import './App.css';
+import Intro from './Intro';
+import { Projects } from './Projects';
+import Certificates from './Certificates'
+import Socials from './Socials'
+import Connect from './Connect';
+
+
+
 
 function App() {
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show')
+      }
+      else {
+        entry.target.classList.remove('show')
+
+      }
+    })
+  })
+
+  const hiddenElement = document.querySelectorAll('.hidden')
+  hiddenElement.forEach((el)=>observer.observe(el));
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Intro src="./pranav_picture.jpg" />
+      <Projects />
+      <Certificates />
+      {/* <Socials/> */}
+      <Connect />
+
+
+
     </div>
   );
 }

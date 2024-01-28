@@ -1,0 +1,58 @@
+/*body{
+    overflow: scroll;
+    height: max-content;
+}
+
+
+@keyframes slideToRight{
+    0%{
+        top: 20%;
+    }
+
+
+    100%{
+        bottom: 100%;
+    }
+}
+.slide-to-right{
+    animation: slideToRight;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+div .blocks{
+    height: 50px;
+    width: 50px;
+    background-color: rebeccapurple;
+    position: fixed;
+}
+.block1{
+    /* top: 30%; 
+    left: 70%;
+    /* bottom:100%; 
+}
+.block2{
+    /* top: 40%; 
+    left: 60%;
+    /* bottom:100%; 
+
+}
+.block3{
+    /* top: 20%; 
+    left: 5%;
+    /* bottom:100%; 
+
+}
+.block4{
+    /* top: 30%; 
+    left: 40%;
+    /* bottom:100%; 
+}
+*/
+.scroller{
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
